@@ -1,10 +1,16 @@
 alias sn="sudo nano"
-alias nv="neovim"
-alias v="neovim"
+alias nv="nvim"
+alias v="nvim"
 
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+alias g="git status"
+function gitCommitAllWithMsg-fn {
+  git commit -am $1
+}
+alias gcm=gitCommitAllWithMsg-fn
 
 # docker
 alias d='docker'
