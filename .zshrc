@@ -1,14 +1,19 @@
-source ./zsh/aliases.zsh
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=50000
+bindkey -v
+# End of lines configured by zsh-newuser-install
 
-if command -v nvim &> /dev/null; then
-    export EDITOR="nvim"
-    export VISUAL="nvim"
-else
-    export EDITOR="nano"
-    export VISUAL="nano"
-fi
+source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/zsh/aliases.zsh
 
-# Starship
-if command -v starship &> /dev/null; then
+# Set up fzf key bindings and fuzzy completion
+
+# source <(fzf --zsh)
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
-fi
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
