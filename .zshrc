@@ -2,18 +2,19 @@
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=50000
-bindkey -v
 # End of lines configured by zsh-newuser-install
 
-source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 source ~/zsh/aliases.zsh
 
-# Set up fzf key bindings and fuzzy completion
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
-# source <(fzf --zsh)
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
