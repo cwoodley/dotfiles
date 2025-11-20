@@ -13,6 +13,8 @@ source ~/zsh/aliases.zsh
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  autoload -Uz compinit
+  compinit
 fi
 
 eval "$(starship init zsh)"
