@@ -16,7 +16,7 @@ $character"""
 
 continuation_prompt = "[.](bright-black) "
 
-# palette = "catppuccin_macchiato"
+palette = "catppuccin_macchiato"
 
 
 [character]

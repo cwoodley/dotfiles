@@ -19,3 +19,8 @@ function dsr-fn {
 }
 alias dsr=dsr-fn
 alias dcu="docker compose up -d"
+
+function mkcd-fn {
+  mkdir -p $1; z $1
+}
+alias mkcd=mkcd-fn
