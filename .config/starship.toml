@@ -10,22 +10,12 @@ $python\
 $nodejs\
 $docker_context\
 $jobs\
-$cmd_duration\
 $line_break\
-$character"""
+[>](bold green) """
 
 continuation_prompt = "[.](bright-black) "
 
 palette = "catppuccin_macchiato"
-
-
-[character]
-success_symbol = "[>](bold green)"
-error_symbol = "[x](bold red)"
-vimcmd_symbol = "[<](bold green)"
-vimcmd_visual_symbol = "[<](bold yellow)"
-vimcmd_replace_symbol = "[<](bold purple)"
-vimcmd_replace_one_symbol = "[<](bold purple)"
 
 [git_branch]
 truncation_length = 28
@@ -44,7 +34,8 @@ read_only = " ro"
 symbol = "docker "
 
 [hostname]
-#style = "fg:yellow"
+format = '[$hostname]($style) in '
+style = 'bold green'
 
 [lua]
 symbol = "lua "
