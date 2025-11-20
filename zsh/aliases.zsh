@@ -1,3 +1,7 @@
+_exists() {
+  command -v $1 > /dev/null 2>&1
+}
+
 alias sn="sudo nano"
 alias nv="nvim"
 alias v="nvim"
@@ -6,11 +10,13 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# git
 alias g="git status"
 function gitCommitAllWithMsg-fn {
   git commit -am $1
 }
 alias gcm=gitCommitAllWithMsg-fn
+alias gpum="git push origin"
 
 # docker
 alias d='docker'
@@ -24,3 +30,24 @@ function mkcd-fn {
   mkdir -p $1; z $1
 }
 alias mkcd=mkcd-fn
+
+# replace ls with eza
+if _exists eza; then
+  alias ls='eza \
+    --long \
+    --all \
+    --header \
+    --group-directories-first \
+    --show-symlinks \
+    --group \
+    --modified \
+    '
+  alias tree='eza --tree --level=2'
+  alias l='ls'
+  alias la='ls -lAh'
+fi
+
+# replace cd with zoxide
+if _exists zoxide; then
+  alias cd='z'
+fi
