@@ -9,7 +9,7 @@ if [[ "$OSTYPE" != "darwin"* ]]; then
   source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-source ~/zsh/aliases.zsh
+source ./zsh/aliases.zsh
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

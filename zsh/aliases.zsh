@@ -2,6 +2,8 @@ _exists() {
   command -v $1 > /dev/null 2>&1
 }
 
+source './scripts/rcp.sh'
+
 alias sn="sudo nano"
 alias nv="nvim"
 alias v="nvim"
@@ -9,6 +11,7 @@ alias v="nvim"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
 
 # git
 alias g="git status"
