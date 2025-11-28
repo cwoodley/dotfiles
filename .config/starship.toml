@@ -15,7 +15,7 @@ $line_break\
 
 continuation_prompt = "[.](bright-black) "
 
-palette = "catppuccin_macchiato"
+palette = "catppuccin_mocha"
 
 [git_branch]
 truncation_length = 28

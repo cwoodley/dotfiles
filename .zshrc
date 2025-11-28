@@ -4,6 +4,15 @@ HISTSIZE=10000
 SAVEHIST=50000
 # End of lines configured by zsh-newuser-install
 
+if [[ -x nvim ]]; then
+  export EDITOR=nvim
+  export VISUAL=nvim
+else 
+
+  export EDITOR=nano
+  export VISUAL=nano
+fi
+
 
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -14,6 +23,6 @@ eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
-if [[ -r ~/.aliasrc ]]; then
-    . ~/.aliasrc
+if [[ -r ~/aliases ]]; then
+    source ~/aliases
 fi
