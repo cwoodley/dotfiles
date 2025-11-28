@@ -26,7 +26,11 @@ function dsr-fn {
   docker stop $1;docker rm $1
 }
 alias dsr=dsr-fn
+alias dps=docker ps
+
 alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+alias dcrm="docker compose rm"
 
 function mkcd-fn {
   mkdir -p $1; z $1

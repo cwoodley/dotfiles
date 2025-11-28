@@ -4,14 +4,10 @@ HISTSIZE=10000
 SAVEHIST=50000
 # End of lines configured by zsh-newuser-install
 
-if [[ -x nvim ]]; then
-  export EDITOR=nvim
-  export VISUAL=nvim
-else 
+export EDITOR=nvim
+export VISUAL=nvim
 
-  export EDITOR=nano
-  export VISUAL=nano
-fi
+alias reload="source ~/.zshrc"
 
 
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
