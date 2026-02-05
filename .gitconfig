@@ -3,7 +3,12 @@
 	name = Cale Woodley
 [credential "https://github.com"]
 	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+	helper = !/home/cale/.local/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+	helper = !/home/cale/.local/bin/gh auth git-credential
+[init]
+	defaultBranch = main
+[merge]
+	tool = nvimdiff
+	conflictstyle = diff3

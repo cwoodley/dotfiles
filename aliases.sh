@@ -2,15 +2,14 @@ _exists() {
   command -v $1 > /dev/null 2>&1
 }
 
-
-alias sn="sudo nano"
+alias curl="noglob curl -OL"
+alias lg="lazygit"
 alias nv="nvim"
 alias v="nvim"
 
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
 
 # git
 alias g="git status"
@@ -21,25 +20,25 @@ alias gcm=gitCommitAllWithMsg-fn
 alias gpum="git push origin"
 
 # docker
-alias d='docker'
 function dsr-fn {
   docker stop $1;docker rm $1
 }
 alias dsr=dsr-fn
 alias dps=docker ps
 
+alias ld="lazydocker"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dcrm="docker compose rm"
 
 function mkcd-fn {
-  mkdir -p $1; z $1
+  mkdir -p "$1"; z "$1"
 }
 alias mkcd=mkcd-fn
 
 # replace ls with eza
 if _exists eza; then
-  alias ls='eza \
+  alias ls="eza \
     --long \
     --all \
     --header \
@@ -47,13 +46,24 @@ if _exists eza; then
     --show-symlinks \
     --group \
     --modified \
-    '
-  alias tree='eza --tree --level=2'
-  alias l='ls'
-  alias la='ls -lAh'
+    "
+  alias tree="eza --tree --level=2"
+  alias l="ls"
+  alias la="ls -lAh"
 fi
 
 # replace cd with zoxide
 if _exists zoxide; then
-  alias cd='z'
+  alias cd="z"
 fi
+
+# fzf tricks
+
+# kill process by pid
+alias fzk='"$HOME"/scripts/fzk.sh'
+
+
+alias tma='"$HOME"/scripts/tmux-session-mgr.sh'
+
+
+
