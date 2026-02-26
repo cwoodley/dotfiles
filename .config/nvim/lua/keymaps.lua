@@ -8,7 +8,8 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true, desc = "[s]ource [c]onfig" }
 )
 
-keymap.set("n", "<leader>gra", vim.lsp.buf.code_action, {})
+keymap.set("n", "<leader>gra", vim.lsp.buf.code_action, { desc = "[g]o [r]un [a]ction" })
+keymap.set("n", "grd", "<cmd>:lua vim.lsp.buf.definition()<cr>", { desc = "[g]o to [d]efinition" })
 -- page scrolling
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "move down, centre line" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up, centre line" })

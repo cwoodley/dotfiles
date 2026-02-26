@@ -2,16 +2,14 @@ _exists() {
   command -v $1 > /dev/null 2>&1
 }
 
-alias curl="noglob curl -OL"
-alias lg="lazygit"
 alias nv="nvim"
 alias v="nvim"
-
 alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
 # git
+alias lg="lazygit"
 alias g="git status"
 function gitCommitAllWithMsg-fn {
   git commit -am $1
@@ -25,7 +23,6 @@ function dsr-fn {
 }
 alias dsr=dsr-fn
 alias dps=docker ps
-
 alias ld="lazydocker"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
@@ -61,9 +58,8 @@ fi
 
 # kill process by pid
 alias fzk='"$HOME"/scripts/fzk.sh'
-
-
 alias tma='"$HOME"/scripts/tmux-session-mgr.sh'
 
+alias nom='npm'
 
 

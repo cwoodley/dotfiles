@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 -- options
 --
+vim.cmd("set termguicolors")
 vim.opt.cmdheight = 2
 vim.opt.tabstop = 2 -- 2 spaces per tab
 vim.opt.expandtab = true -- tabs are spaces

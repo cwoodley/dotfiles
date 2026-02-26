@@ -11,9 +11,9 @@ return {
 
 		builtin.register_ui_select()
 		-- vim.keymap.set('n', '<leader>sf', '<cmd>FzfLua files<CR>')
-		vim.keymap.set("n", "<leader>sf", builtin.files)
+		vim.keymap.set("n", "<leader>sf", builtin.files, { desc = "[s]earch for [f]ile" })
 		vim.keymap.set("n", "<leader><leader>", "<cmd>FzfLua buffers<CR>")
-		vim.keymap.set("n", "<leader>sq", "<cmd>FzfLua quickfix<CR>")
+		vim.keymap.set("n", "<leader>q", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", { desc = "[s]earch for [f]ile" })
 		vim.keymap.set("n", "<leader>sh", "<cmd>FzfLua helptags<CR>", { desc = "[S]earch [H]elp" })
 		vim.keymap.set("n", "<leader>sk", "<cmd>FzfLua keymaps<CR>", { desc = "[S]earch [K]eymaps" })
 		vim.keymap.set("n", "<leader>sg", "<cmd>FzfLua live_grep<CR>", { desc = "[S]earch by [G]rep" })
